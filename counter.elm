@@ -23,10 +23,7 @@ main =
 
 type Msg
     = Add String
-
-
-
--- | Reset
+    | Reset
 
 
 update msg model =
@@ -49,10 +46,8 @@ update msg model =
                         Just counter ->
                             { model | counter = Just (counter ++ s) }
 
-
-
---    Reset ->
---        initialModel
+        Reset ->
+            initialModel
 
 
 view model =
@@ -84,7 +79,6 @@ view model =
                 , button [ onClick (Add "7") ] [ text "7" ]
                 , button [ onClick (Add "8") ] [ text "8" ]
                 , button [ onClick (Add "9") ] [ text "9" ]
-
-                --    , button [ onClick Reset] [ text "Reset"]
+                , button [ onClick Reset ] [ text "Reset" ]
                 ]
             ]
